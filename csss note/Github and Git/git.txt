@@ -1,0 +1,108 @@
+to see the Git version **
+>> git --version
+
+
+Je folder a git track korte parbe taake Reposarity bole**
+Reposarity 2type local , online Reposarity(Github)
+
+** Create Local Reposary in your computer
+>> first crete a folder (je folder a kaaj/track korbo)
+>>> cd Desktop/
+>>> mkdir (folderName)
+>>> cd foldername/
+>>> git init (** Make this folder git directory)
+   after this step .git folder will create in this hidden folder... and now
+   this folder is trackable by git
+
+
+
+** now track this folder 
+** we will create a text file which will be track
+***create text file
+>>> touch first.txt  (Enter>> ) then open in notepad first.txt
+  > edit anything this text file in notepad and save
+>>> git status   (to check anything change )
+ > result >> On branch Master  
+          >> Initial Commit
+          >> Untracked file    (red color:: first.txt)
+ track kora means staging kora
+ ** staging cmd
+  >>> git add first.txt
+  >> git status  (again check > and it will green)
+
+  **commit
+  >>> git commit -m " "
+
+  // log
+  >>> git log   (see all commit)  >>> git log --oneline   ()
+
+
+
+
+
+1.. working directory
+//learn with sumit
+// git initializatio via server(git init ) 
+>>dui vabe kora jai akta local Reposarity and server Reposarity
+
+>server code clone (root folder)
+>>> git clone (link)
+>>> ls      (to see all file on this folder)
+
+(some change on gitone > one.txt)
+> git staus ( what is changing is showing )
+
+2. staging (wd - stage)
+>>> git add --all  (to stage all file changes)  >>>git add --A >>>git add . (dot)  (for only folder file )
+>>> git reset    (return to previous unstagged)
+>>>git add *                   ( stage all file without deleted file)
+>>> git add myFolder/three.txt    (individual stage)
+>>git add *.txt                 (all txt file staged)
+
+>> git reset --hard  (to back deleted file unstagged) (after manually delete two.txt)
+
+
+3. Commit (stage- local Reposarity)
+>>> git commit -m "i have changed some"
+>> git reset HEAD~   (to take Reposarity to local >> unstagged)
+ 
+ // git remove
+ >>> git rm two.txt  (delete and stage together)
+ >>> git rm two.txt -f  (normally after change git cannot permission to delete 
+                        but if you want to forcefully delete then this command)
+  >>> git rm --cached two.txt   (after change it show deleted in stage but remain in directory)                      
+  >>>git rm -r folder   ( it will delete folder inside all folder)
+
+// branching
+// if client want to change something after final submit then we need to create another branch to work
+// then finaly merge them between main branc and development branch
+>to create branch 
+>>> git branch development
+>>> git branch               ( to see total branch)
+>>> git checkout development   ( to switch development branch)
+
+
+// to merge development with main (from development branch)
+>>> git merge main -m "merging on development with main" 
+
+
+// merge conflict hote pare jokhon same changes on both branch
+
+// to push on server (local to remote)
+>>> git push origin main          (all the main branc changes file will appear on github)
+>>> git checkout development  >>> git push origin development   (development brance will upload )
+
+// to fetch   (remote to local directory) 
+// and to see changed result on working directory use 
+>>> git  pull          ( pull = fetch +  merge) remote to local
+
+
+// remote to local directory(main>>) => if we changed something
+>>> git fetch     (just chang will show but file not changed)
+>>> git merge    (then file also changed on local directory)
+
+// but if we use >>>git pull 
+// then git fetch + merge work together
+
+
+

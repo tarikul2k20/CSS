@@ -1,0 +1,45 @@
+.gallery{
+    border: 2px solid #999;
+    width: 154px;
+    height: auto;
+    box-sizing: border-box;
+}
+.imag{
+    background-color: #555;
+    width: 150px;
+    height: auto;
+}
+img:hover{
+    border: 2px solid red;
+    box-sizing: border-box;
+    filter: alpha(oracity=50);
+    opacity: 0.6;
+}
+.tbox{
+    padding: 5px ;
+    width: 150px;
+    height: auto;
+    text-align: center;
+    font-weight: bold;
+    background-color:#555 ;
+   display: block;
+
+}
+input[type=text]{
+    padding: 10px 5px;
+    background-color: #999;
+    box-sizing: border-box;
+    outline: none;
+}
+input[type=text]:focus{
+    background-color: #555;
+}
+.art{
+    background-image: url('new.jpg'),url("new.jpg");
+    background-position: left top, right bottom;
+    padding: 15px;
+    background-repeat: no-repeat,repeat;
+    background-size: cover,100px 100px;
+
+
+}

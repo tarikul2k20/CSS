@@ -1,0 +1,285 @@
+/* key board Shortcut*/
+ /*
+  select line >> ctrl+L
+  copy line up/down >>  Alt+Shift+Down
+  select all similar text >>  F2   (shift+enter to preview...Enter to done)
+  Comment >>  Ctrl+/
+  Child element>>   ul>li>li  with classes >>   .div>.div>div  with classes name>>>  div.container>div.box>div.content
+  solid child>>>>  ul>li+li+li
+  Insert line below/Finishing Line>>> Shift+Enter       Ctrl+Enter) >>(default)
+  Go to Start/End >>> Ctrl+Home, Ctrl+End
+  Go to end of line >> Shift+Space  (default>> End)
+ */
+
+/* 
+ Font: google(sofia , arial)
+ icon: font awesome , bootstrap, google icon*/
+
+body{
+    background-color: aliceblue;
+    margin: 0;
+    padding: 0;
+    border: 0em; 
+
+
+
+}
+.transform{
+    text-transform: capitalize;  /* uppercase,lowercase*/
+    text-decoration: underline;  /* none, overline, line-through*/
+    line-height: ;   letter-spacing: ;  text-indent: ;   word-spacing: ;
+    text-shadow: 3px 3px red;       (horizontal, vertical, blur, area , color(rgba) )
+    font-variant: small-caps;
+    
+}
+
+
+
+/* link */
+a:link{}
+a:visited{}
+a:hover{}
+a:active{}
+
+/* table border */
+table { border-collapse: collapse;} 
+  table, td, th { border: 1px solid black; }
+
+    tr:nth-child(even) {background-color: #f2f2f2;}
+
+
+
+    /* display:none; visibility: hidden */
+    display: none  it does not take any space 
+    visibility : hidden it will be hidden but space is taken
+    /* margin:auto is not working if width of content is not declared */
+
+
+
+    /* position : sticky */
+    position: static,relative,absolute,fixed, sticky(must be position top,left,bottom)
+  position: static; is not affected by top left etc vlau 
+  positon: relative; it is affected
+  position: absolute; 
+    
+  /* z-index */
+    opacity: 0.3;
+
+    If an element is taller than the element containing it , use overflow: auto; (margin and padding issue problem
+     may occur)  or (below the best method)
+    .div::after {
+        content: "";
+        clear: both;
+        display: table;
+      
+      }
+
+
+
+      /* Pseudo class */
+      ::first-letter ::first-line ::selection
+
+      h1::after {
+        content: url("smiley.gif");
+      }
+
+
+
+/* opacity */
+div {
+  background: rgba(7, 175, 80, 0.3) /* Green background with 30% opacity ... if we only use opacity then content
+   also will be blur...but using rgba only background will be blur*/
+}
+
+N.B: at the time of hovering z-index may given
+
+float:left; clear:left;   istead of this  we use display: inline-block; 
+
+
+
+
+/* Dropdown */
+.dropdown{
+  position: relative;
+  cursor: pointer;
+}
+.dropdowncontent{
+  display: none;
+  position: absolute;
+  z-index: 1;
+  box-shadow:horizonta_shadow  vertical_shadow  blur  area_of_shadow  rgba(red, green, blue, alpha);
+}
+.dropdown:hover .dropdowncontent{
+   display: block;
+}
+
+
+
+/* form animated input*/
+input[type="text"]{
+  background-image: url("icon.png");  // search icon
+  background-position: 5px 5px;
+  background-color: red;
+  transition: width 0.5s ease; 
+}
+input[type="text"]:focus{
+  width: 100%;
+}
+
+
+
+/* Background Property */
+div{background-image:url(" ");
+background-repeat:repeat-x, no-repeat;
+background-size: auto,cover,contain; or   20px 30px;   (width height)
+background-position: top left; 
+background-attachment:  fixed, scroll, auto;
+background-origin: content-box, padding-box, border-box;
+background-clip: content-box, padding-box, border-box;
+
+
+
+
+/* responsive image */ inside div
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+/* to center a text */
+p{
+  text-align: center;
+  padding: ; some value to keep center vertically
+  
+}
+img{
+  width: 200px;
+  height: 200px;
+   object-fit: cover; /*contain , scale-down */
+  /* it will cover/fit  the size 200*200 however the size like 400*300 */
+}
+
+
+ /* disable button  */
+ .button{
+   cursor: not-allowed; (pointer)
+ }
+
+
+
+/* content posittion center on div or something */
+    .content{
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+    }
+
+
+
+    /* vertical-align: middle; vertically center */
+    https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate1
+    https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate3
+    glyps mark
+    
+    outline : none; border:none ; also
+    if you see extra border after border radius then use outline:none;
+
+
+
+    /* Resize property */
+   div{
+     resize: :horizontal; (vertical,both,none)
+     overflow: auto;
+   }
+
+
+
+   /* Column-count */
+   div{
+     column-count: 3;
+     column-gap: 20px;
+     column-rule: 1px solid red;
+     column-span: all; (none, initial) /* heading on all the column  */
+   }
+/* box-sizing: border-box; */
+
+
+
+/* object fit  */
+img{
+  object-fit: cover,contain,scale-down;  (fill, none almost nothing effect)
+  border-width: 1px;
+}
+
+
+
+/* Flex proprty */
+div{
+  display: flex;
+  flex-direction: column; (row, row-reverse, column-reverse)
+  flex-wrap: wrap,nowrap, wrap-reverse,; (wrap>>> responsive all flex/div item after resizing ) , nowrap>> not responsive
+}
+
+
+/* shorthand */
+div{
+  flex-flow: row wrap; (flex-direction .....flex-wrap )
+
+}
+https://www.w3schools.com/css/css3_flexbox.asp  very large content
+
+
+
+/* The "justify-content: center;" aligns the flex items at the center of the container: */
+
+.flex-container {
+  display: flex;
+  justify-content: center; /* flex-start, flex-end , space-between, space-around , space-evenly*/ (horizontal)
+  align-items: center;  /* flex-start, flex-end , streach(default) */
+  /* The align-items property is used to align the flex items vertically. */
+}
+
+/* The align-content property is used to align the flex lines. */
+.container{
+  align-content: space-between; /* align item (row)vertically,,,but align-item property - align item vertically (column) */
+}
+/* The "align-content: space-between;" displays the flex lines with equal space between them: */
+
+
+/* Another property  of flex*/
+order= ;, /* which one would be first second ...*/ 
+flex-grow: ;   /* set the width of the div and it will be smaller first which given this property then others will*/
+flex-shrink: ; /* which div would be this property which does not small but other will be small*/
+ flex-basis: ; /* it will be small with others size*/
+ 
+ /* shorthand of flex  */
+ flex : flex-grow flex-shrink flex-basis;
+
+ align-self: center;  /* selected div will be align  */
+
+
+ /* Grid */
+ div{
+   display: grid;
+   grid-gap: 20px ; /* row , and column game  of the div*/
+   grid-template-columns: auto auto auto;  (1fr, 2fr)  /*The grid-template-columns property defines the number of columns
+    in your grid layout, and it can define the width of each column.*/
+    grid-template-rows: 100px auto 200px;
+    grid-gap: ;
+    grid-column-gap: ;
+ }
+
+ .div {
+    grid-column-start: 1;      // grid-column: 1/3; //shortcut but same output
+    grid-column-end: 3;
+  
+ }
+
+ //grid  by sumit 
+
+
+
+

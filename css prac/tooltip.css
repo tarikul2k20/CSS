@@ -1,0 +1,64 @@
+.tool{
+   position: relative;
+    border-bottom: 1px dotted black;
+    display: inline-block;
+    margin: 0 auto;
+    left: 50%;
+    top: 200px;
+}
+.menu{
+   position: absolute;
+   display: none;
+   width: 150px;
+   background: #ddd;
+   color: black;
+   text-align: center;
+   
+   border-radius: 6px;
+   bottom: 109%;
+   left: 50%;
+   margin-left: -75px;
+}
+.menu ul{
+    background-color: #ddd;
+    color: black;
+    margin: 0;
+    padding: 0;
+    border-radius: 6px;
+}
+.menu ul li{
+   border-bottom: 1px solid #999;
+   list-style-type: none;
+   width: 100%;
+}
+.menu ul li:last-child{
+   border-bottom: none;
+}
+.menu ul li a{
+   display: block;
+   text-decoration: none;
+   color: black;
+   padding: 5px 0;
+   transition: all 0.4s ease;
+}
+.menu ul li:hover a{
+   background: #4caf50;
+   color: white;
+}
+.menu::after{
+   content: "";
+   position: absolute;
+   top: 100%;
+   left: 50%;
+   margin-left: -5px;
+   border-width: 5px;
+   border-style: solid;
+   border-color: #ddd transparent transparent transparent;
+}
+.tool:hover .menu{
+  display: block;
+}
+.menu:hover::after{
+   border-color: #4caf50 transparent transparent transparent;
+
+}

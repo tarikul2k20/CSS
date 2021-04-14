@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Mukta&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+.container{
+    position: relative;
+    width: 1000px;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+
+}
+.container .content{
+    text-align: center;
+    width: 500px;
+    
+
+}
+.container .content h2{
+    font-size: 10vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 1em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    background-attachment: fixed;
+
+}
+
+.container:nth-child(1)  h2 {
+    background: url("sample/sport1.jpg");
+}
+
+
+.container:nth-child(2)  h2{
+    background: url(sample/sport2.jpg);
+}
+
+.container:nth-child(3)  h2{
+    background: url(sample/sport5.jpg);
+}
+
+.container .content p{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.container .content a{
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #000;
+    text-decoration: none;
+    color: #000;
+    margin-top: 20px;
+}
+

@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background : #121528;
+    font-family: cursive;
+}
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 1000px;
+}
+.nav{
+    width: ;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 20px 20px 0px;
+}
+.nav .active{
+    color : #FDB302;
+}
+.nav .logo{
+    font-size: 1.5em;
+    font-weight: 800;
+}
+.nav li{
+    list-style-type: none;
+    display: inline;
+    margin-left: 15px;
+}
+.nav a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+
+}
+.content{
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 45px;
+
+}
+.content h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+    font-weight: 1000;
+    font-size: 3em;
+    line-height: 50px;
+    letter-spacing: -1px;
+}
+.name{
+    color: #FDB302;
+}
+.content p{
+    color: #999;
+}
+.content button{
+    color: #fff;
+    border-radius:20px ;
+    font-weight: 900;
+    outline: none;
+    border: none;
+    padding: 10px 25px;
+    background: #FDB302;
+    margin-top: 40px;
+    text-decoration: none;
+}
+
+.img-card{
+    position: relative;
+    margin-top: 60px;
+    border-left: 2px solid #ddd;
+    
+    width: 185px;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+.img-card::after{
+    content: '';
+    position: absolute;
+    
+    background: linear-gradient(red,orange);
+    z-index: 11;
+
+}
+
+.img-card .img-box img{
+    opacity: 0.3;
+}
+.img-card img{
+   width: 180px;
+   height: 230px;
+   
+}
+.img-card .icon-box{
+   background-color: #fff;
+   margin-top: 0;
+   overflow: hidden;
+   height: 30px;
+
+}
+.img-card .icon{
+    width: 20px;
+    height: 20px;
+    background:;
+    margin-top: 7px;
+}
+.img-card .icon-box img:hover{
+    width: 24px;
+    height: 24px;
+    box-sizing: border-box;
+    margin-top: px;
+}
+.about{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.about .details{
+    width: 350px;
+}
+.about .details h2{
+    color: #fff;
+}
+.about .details .color{
+    color: #FDB302;
+}
+.about .details p{
+    color: #ddd;
+}
+.about .details .rating{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.rating h4{
+    color: #8ADC9E;
+}
+.rating .two{
+    color: #E66E6F;
+}
+.rating{
+    position: relative;
+    background: #121528;
+}
+.rating div{
+    margin-right: 15px;
+    width: 100px;
+}
+.rating .one{
+    background: #121528;
+    padding: 15px;
+    border-radius: 13px;
+}
+.rating .one::after{
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    bottom: -1px;
+    background: linear-gradient(315deg,transparent, red, orange);
+    width: 70px;
+    height: 100%;
+    padding: ;
+    z-index: -555;
+    border-radius: 15px;
+    
+}
+
+.myServices{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+.myServices p{
+    color: #ddd;
+}
+.myServices h2{
+    color: #fff;
+
+}
+.myServices .color{
+    color: #FDB302;
+}
+.another-card{
+    position: relative;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.another-card div{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 230px;
+    background: rgb(121, 121, 138);
+    padding: 30px;
+    border-radius: 15px;
+}
+.another-card img{
+    margin-bottom: 10px;
+    width: 50px;
+    height: 50px;
+
+}
+.another-card h5{
+    color: #fff;
+   
+}
+.another-card p{
+    color: #ddd;
+    margin-top: 5px;
+}
+.edu{
+    position: relative;
+    margin-top: 50px;
+    margin-left: 100px;
+
+}
+.edu p, h2{
+    color: #ddd;
+}
+.edu h2{
+    display: inline-block;
+}
+.edu span{
+    color: #FDB302;
+}
+.edu .butt{
+    position: absolute;
+    background: #FDB302;
+    border: none;
+    outline: none;
+    right: 80px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    
+}
+.edu .butt a{
+    text-decoration: none;
+    color: #fff;
+}

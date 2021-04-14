@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+const array=[1,2.5, 3, -3];
+const fun=(arr)=>{
+    const arrList = arr.map(num => Number.isInteger(num) && num>0).filter(x=> x*x);
+    return arrList;
+}
+const arrList = fun(array);
+console.log(arrList);
+
+
+
+ 
+ 
+ 
+
+
+    </script>
+</body>
+</html>

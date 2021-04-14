@@ -1,0 +1,39 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+span{
+    border-bottom: 1px dotted black;
+   
+}
+.text{
+  position: relative;
+}
+.hovertext{
+    position: absolute;
+ display: none;
+ background: #ddd;
+ padding: 5px;
+ border-radius: 4px;
+ bottom: 100%;
+ width: 80px;
+ left: -12px;
+}
+.text:hover .hovertext{
+    display: block;
+
+}
+.hovertext::after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #ddd transparent transparent transparent;
+
+
+}

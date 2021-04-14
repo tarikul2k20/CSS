@@ -1,0 +1,274 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Yashveer Kumar">
+    <title>Cigarette Timeline</title>
+    
+    
+ <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    
+    <style>
+    
+    @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+ 
+/* Reset */
+
+html {
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	text-decoration:none;
+}
+
+/* /Reset */
+
+body {
+	background-color: #eca426;
+	color: #000;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1 {
+    font-family: 'Shadows Into Light', cursive;
+	padding-top: 10px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 22px;
+}
+
+h3 {
+	text-align: center;
+	padding-bottom: 10px;
+	color: #fff;
+	font-size: 15px;
+}
+
+.timeline {
+	width: 540px;
+	margin: 0 auto;
+	height: 610px;
+	background:transparent url(cigarette.png) center 0 no-repeat;
+	padding-top: 18px;
+	overflow: hidden;
+}
+
+.container {
+	position: relative;
+	width: 50%;
+	color: #fff;
+}
+
+.container .divider {
+	position: relative;
+	width: 135px;
+	background-color: #fff;
+	height: 2px;
+	left: 129px;
+	margin: 5px 0 5px;
+}
+
+.container.right .divider {
+	left: 6px;
+}
+
+.container .divider::before {
+	content: '';
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	left: -12px;
+	top: -5px;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+.container .divider::after {
+	content: '';
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	right: -12px;
+	top: -5px;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+.left {
+	left: 0;
+}
+
+.right {
+	left: 50%;
+}
+
+.icon, .text {
+	width: 190px;
+	text-align: center;
+}
+
+.right .icon, .right .text {
+	margin-left: 80px;
+}
+
+.icon img {
+	width: 50px;
+}
+
+.content {
+	position: relative;
+}
+
+.content h2 {
+	width: 80px;
+	position: absolute;
+	top: 8px;
+	right: -40px;
+	text-align: center;
+	font-size: 1.5em;
+	color: #000;
+	font-weight: bold;
+	line-height: 0.7em;
+}
+
+.right .content h2 {
+	left: -40px;
+}
+
+.content h2 span {
+	color: #288d81;
+	font-size: 0.6em;
+}
+
+.second-1{
+	animation-delay: 1s;
+}
+
+.second-2{
+	animation-delay: 2s;
+	top: -30px;
+}
+
+.second-3{
+	animation-delay: 3s;
+	top: -33px;
+}
+
+.second-4{
+	animation-delay: 4s;
+	top: -56px;
+}
+
+.second-5{
+	animation-delay: 5s;
+	top: -81px;
+}
+
+.second-6{
+	animation-delay: 6s;
+	top: -100px;
+}
+
+
+
+        p{
+            font-size: 16px;
+        }
+
+
+
+    
+    </style>
+    
+</head>
+<body>
+    <h1>QUIT SMOKING<br> START HEALING</h1>
+    <h3>THE BENEFITS OF QUITTING SMOKING</h3>
+    <div class="timeline">
+        <div class="container left animated fadeInUp second-1">
+         
+          <div class="content">
+            <h2>20<br> <span>MIN</span></h2>
+            <div class="icon"><img src="icon-1.png" alt=""></div>
+            <div class="divider"></div>
+            <p class="text">Heart rate and blood pressure are stabilised; you stop polluting the air</p>
+          </div>
+        </div>
+        <div class="container right animated fadeInUp second-2">
+            <div class="content">
+                <h2>24<br> <span>HRS</span></h2>
+                <div class="icon"><img src="icon-2.png" alt=""></div>
+                <div class="divider"></div>
+                <p class="text">Smoker's breath disappears; oxygen levels normalise</p>
+            </div>
+        </div>
+        
+        <div class="container left animated fadeInUp second-3">
+            <div class="content">
+                <h2>2-3<br> <span>DAYS</span></h2>
+                <div class="icon"><img src="icon-3.png" alt=""></div>
+                <div class="divider"></div>
+                <p class="text">Sense of taste and smell improve; breathing becomes easier</p>
+            </div>
+        </div>
+        <div class="container right animated fadeInUp second-4">
+            <div class="content">
+                <h2>1-9<br> <span>MOS</span></h2>
+                <div class="icon"><img src="icon-4.png" alt=""></div>
+                <div class="divider"></div>
+                <p class="text">Blood circulation and energy levels improve; exercising becomes easier</p>
+            </div>
+        </div>
+
+        <div class="container left animated fadeInUp second-5">
+            <div class="content">
+                <h2>1-5<br> <span>YRS</span></h2>
+                <div class="icon"><img src="icon-5.png" alt=""></div>
+                <div class="divider"></div>
+                <p class="text">Lower risk of heart disease and stroker</p>
+            </div>
+        </div>
+        <div class="container right animated fadeInUp second-6">
+            <div class="content">
+                <h2>10<br> <span>YRS</span></h2>
+                <div class="icon"><img src="icon-6.png" alt=""></div>
+                <div class="divider"></div>
+                <p class="text">Risk of heart disease is same as of a non-smoker</p>
+            </div>
+        </div>
+    </div> <!-- /.timeline -->
+
+
+</body>
+ 
+</html>
+ 
