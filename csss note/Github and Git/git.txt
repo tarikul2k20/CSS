@@ -40,7 +40,7 @@ Reposarity 2type local , online Reposarity(Github)
 
 
 
-1.. working directory
+1.. working directory(wd)
 //learn with sumit
 // git initializatio via server(git init ) 
 >>dui vabe kora jai akta local Reposarity and server Reposarity
