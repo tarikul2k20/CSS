@@ -72,7 +72,7 @@ function parentFunction() {
  }
  aParentFunc(6)(4);
 
-
+ 
  //IIFE (Imeditely Invoked(call) Function Expression)
  (function aDemoFunc() {
     console.log('Hello World!');
@@ -144,5 +144,73 @@ myCustomObj.anotherObj.msg(); // output::My name is Ahmed Zonayed
 myCustomObj.anotherObj.msg.call(myCustomObj); 
 
 
+// call , bind , apply
+var myCustom = {
+   name: 'Zonayed Ahmed',
+   age: 21,
+   job: 'Student',
+   anotherObj: {
+      name: 'Ahmed Zonayed',
+      value: function() {
+         console.log('My name is ' + this.name);
+      }.call(myCustom)
+   }
+}
+
+
+// 
+var rahim = {
+   name: 'Rahim Abdu',
+   dob: 1986
+}
+
+var karim = {
+   name: 'Karim Rahman',
+   dob: 1996,
+   age: function(currentYear) {
+      console.log(this.name + ' is ' + (currentYear - this.dob) + ' years old!');
+   }
+}
+
+karim.age.call(rahim, 2018); // for rahim //  output ::rahim is 32 years old
+// we can use bind , apply also same process
+
+
+
+// using apply
+// call and bind unlimited argument nite pare 
+// but apply matro 2 ta nite pare // second argument nei array akaare
+var rahim = {
+   name: 'Rahim Abdu',
+   dob: 1986
+}
+
+var karim = {
+   name: 'Karim Rahman',
+   dob: 1996,
+   age: function(currentYear, msg) {
+      console.log(msg +"  "+ this.name + ' is ' + (currentYear - this.dob) + ' years old!');
+   }
+}
+
+karim.age.apply(rahim, [2020, "hello,"]);
+// output::Hello , rahim is 34 years old
+
+// apply and  call je function a call kora hoi  sathe sathe call kore
+// but bind sathe sathe call kore na
+var myCustomObj = {
+   name: 'Zonayed Ahmed',
+   age: 21,
+   job: 'Student',
+   anotherObj: {
+      name: 'Ahmed Zonayed',
+      value: function() {
+         console.log('My name is ' + this.name);
+      }
+   }
+}
+myCustomObj.anotherObj.value.bind(myCustomObj); // this will not return the value
+var anotherFunc = myCustomObj.anotherObj.value.bind(myCustomObj);
+anotherFunc();  // then you will see the result
 
 
