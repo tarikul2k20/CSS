@@ -141,7 +141,7 @@ myCustomObj.anotherObj.msg(); // output::My name is Ahmed Zonayed
 // since this always search nearest object
 
 // we can declare the first object by call method (call , bind , apply)
-myCustomObj.anotherObj.msg.call(myCustomObj);
+myCustomObj.anotherObj.msg.call(myCustomObj); 
 
 
 

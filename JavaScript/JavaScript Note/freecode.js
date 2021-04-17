@@ -259,7 +259,7 @@ console.log(fun1(2));   // output :: beta
 function fun1(val){
     var answer= "";
 
-    swhitch(val){
+    switch(val){
         case "a": 
          answer = "apple";
          break;
@@ -424,18 +424,11 @@ console.log(gloveType);  // output :: maps
 var myPlants=[
     {
         type: "flowers",
-        list : [
-            "rose",
-            "tulip"
-        ]
+        list : ["rose","tulip"]
     },
     {
         type : "tress",
-        list: [
-            "fir",
-            "pine",
-            "birch"
-        ]
+        list: ["fir","pine","birch" ]
     }
 ];
 var secondTree = myPlants[1].list[1];
@@ -525,6 +518,11 @@ function fun1(name, prop){
 var result = fun1("smith", "phone");
 console.log(result);
 
+
+//object all properties access through special loop 
+for(item in rahim) {
+    console.log(item)
+ }
 
 
 // generate Random Fractions
