@@ -1,4 +1,4 @@
-// function use as argument of another function
+1.// function use as argument of another function
 function callMyName(name, callback) {
     var myAge = 20;
     callback(myAge);
@@ -13,7 +13,7 @@ callMyName('Zonayed Ahmed', hello);
 
 
 
-// funtion use as return function
+2. // funtion use as return function
 function welcomeMsg(name) {
     console.log('Welcome Mr. ' + name);
     return function options(menu) {
@@ -25,7 +25,7 @@ welcomeMsg('Zonayed Ahmed')('Coffee');
 
 
 
-//val cannot changing even under function value of a is changed
+3. //val cannot changing even under function value of a is changed
 function changeValue(a) {
     console.log('Value of a inside function before changing: ' + a);
     a = 10;
@@ -41,7 +41,7 @@ console.log('Value of a after changing function is applied: ' + a);
 
 
 
-//scope
+4. //scope (var function scope)
 function parentFunction() {
     var a = 6;
     function childFunction() {
@@ -53,7 +53,7 @@ function parentFunction() {
 
 
 
- //closures
+ 5. //closures
  function closuresDemo() {
     var x = 10;
     return function() {
@@ -64,7 +64,7 @@ function parentFunction() {
 
  closuresDemo()()
 
- //another
+ 6. //another
  function aParentFunc(a) {
     return function(b) {
        console.log('Sum: ' + (a + b));
@@ -73,24 +73,24 @@ function parentFunction() {
  aParentFunc(6)(4);
 
  
- //IIFE (Imeditely Invoked(call) Function Expression)
+ 7. //IIFE (Imeditely Invoked(call) Function Expression)
  (function aDemoFunc() {
     console.log('Hello World!');
  })();   
 // private function (not accessable by anywhere)  //without call we can see result
 // in last bracket we can give argument if needed
 
- // another 
+ 8. // another 
  var sum = (function() {
     return 10 + 20; 
  })();
 
- // jodi return value deya thake private function a tahole acces kora jabe 
+ // jodi return value deya thake private function a tahole access kora jabe 
 
 
 
  // Advance 
- // this
+ 9. // this
  function helloThis(){
     console.log(this);  // output:: global object // always this indicate a object
  }
@@ -98,7 +98,8 @@ function parentFunction() {
  helloThis();
 
 
- //function helloThis(){
+ // 'use strict' sudhu matro function er moddhei  acces kore // global ke kore na
+ 10. function helloThis(){   
     'use strict';
     console.log(this);
 }
@@ -106,7 +107,7 @@ function parentFunction() {
 helloThis();  // output :: undefined (for "use strict") tai kono object output a dekhabe na
 
 
-// 
+11. //  it will be glball var 
 function unNamed() {
     this.name = 'Zonayed Ahmed';
  }
@@ -116,7 +117,7 @@ function unNamed() {
 // though local scope but this.name means global
 
 
-//
+12. //object
 var myCustomObj = {
     name: 'Zonayed Ahmed',
     age: 21,
@@ -128,7 +129,8 @@ var myCustomObj = {
  myCustomObj.msg();  // output:: My name is Zobayed Ahmed
 
 
- // var myCustomObj = {
+ 13. //je object er moddhe thakbe sei object er this ke indicate korbe
+  var myCustomObj = {
    name: 'Zonayed Ahmed',
    age: 21,
    anotherObj: {
@@ -145,7 +147,7 @@ myCustomObj.anotherObj.msg(); // output::My name is Ahmed Zonayed
 myCustomObj.anotherObj.msg.call(myCustomObj); 
 
 
-// call , bind , apply
+14. // call , bind , apply
 var myCustom = {
    name: 'Zonayed Ahmed',
    age: 21,
@@ -157,9 +159,10 @@ var myCustom = {
       }.call(myCustom)
    }
 }
+//call method sathe sathe call hoye jai alada vabe call kora lage na
 
 
-// 
+15.// call
 var rahim = {
    name: 'Rahim Abdu',
    dob: 1986
@@ -178,7 +181,7 @@ karim.age.call(rahim, 2018); // for rahim //  output ::rahim is 32 years old
 
 
 
-// using apply
+16. // using apply
 // call and bind unlimited argument nite pare 
 // but apply matro 2 ta nite pare // second argument nei array akaare
 var rahim = {
@@ -197,7 +200,7 @@ var karim = {
 karim.age.apply(rahim, [2020, "hello,"]);
 // output::Hello , rahim is 34 years old
 
-// apply and  call je function a call kora hoi  sathe sathe call kore
+17. // apply and  call je function a call kora hoi  sathe sathe call kore
 // but bind sathe sathe call kore na
 var myCustomObj = {
    name: 'Zonayed Ahmed',
@@ -215,11 +218,11 @@ var anotherFunc = myCustomObj.anotherObj.value.bind(myCustomObj);
 anotherFunc();  // then you will see the result
 
 
-// bind method arguments can be declared later
+18. // bind method arguments can be declared later
 var rahimAge = karim.age.bind(rahim, 2018);
 rahimAge('Hello World!');
 
-// onek somoy exact object acces nao hote pare 
+19. // onek somoy exact object acces nao hote pare 
 // amra method use kore fixed korte pari
 var myObj = {
    name: 'Zonayed Ahmed',
@@ -231,14 +234,17 @@ var myObj = {
     }
 }
 myObj.timer();
+//setTimeout global object er akta method // tai this ke call kore dite hobe 
 // 1000 mili second pore output dekhabe
 
+
+20. // primitive data in js=> number , string , boolean, undefined, null
 // convert primitive data to object
 var str = new String("amar sonar ");
 console.dir(str); // then we see the object method/propertie in console 
 
 
-// function constructor=> same type object barbar asle eitar sahajje akbar e toiri korte pari
+21. // function constructor=> same type object barbar asle eitar sahajje akbar e toiri korte pari
 var Person = function(name, age, job) {
    this.name = name;
    this.age = age;
@@ -253,7 +259,7 @@ samirwithmethod.dateOfBirth();
 //output::samir is born in 1996
 
 
-// inheritance(using prototype)
+22.// inheritance(using prototype)
 var PersonOnly = function(name, age, job) {
    this.name = name;
    this.age = age;
@@ -271,7 +277,7 @@ zawad.dateOfBirth();
 PersonOnly.prototype.address = 'Bangladesh';
 console.log(zawad.address)
 
-// inheritance using function constuctor (jodi teacher der same properties thake sudhu subject add korte hoi )
+23.// inheritance using function constuctor (jodi teacher der same properties thake sudhu subject add korte hoi )
 var Person = function(name, age, job) {
    this.name = name;
    this.age = age;
@@ -290,7 +296,7 @@ console.log(kamaljeet.age);
 cannot declare global variable
 
 
-// ES6
+24. // ES6
 // let vs var 
 // we can change value by declaring var but let can not change value
 // varকীওয়ার্ড ফাংশন স্কোপ মেইন্টেইন করে
@@ -305,7 +311,7 @@ console.log('Value: ' + i6);
 // output:: 0,1,2,3,4   
 // output ::value: 13
 
-// template literal and string method (alternative of concate)
+25.// template literal and string method (alternative of concate)
 var name6= "tarik" ;
 var age6 = 22
 console.log(`My name is ${name6} and I\'m ${age6}years old! Currently I\'m a ${work6}`);
@@ -321,13 +327,37 @@ calculateAge(1996);
 startsWith(), endsWith(), includes(), repeat()
 
 
-// arrow function and lexical this keyword   
+26. // arrow function and lexical this keyword   
 const dob = [1996, 1986, 2017, 1989];
 const currentAge5 = dob.map(function(oneDob) {  
    return 2018 - oneDob;
 })
 
-//map() method
+27. //for each from anisul
+var arr = [2,3,4];
+var newArr = [];
+arr.forEach(function(x){
+   newArr.push(x.x);
+})
+console.log(newArr);
+
+//map from anisul
+// map function nijei akta array create kore // so no need to create new array
+var arr = [2,3,4];
+var newArr = arr.map(function(x){
+   return x*x;
+})
+console.log(newArr);
+
+//filter (condition)
+var arr = [3, 12, 33, 4];
+var newArr = arr.filter(function(x){
+   return x>10;
+})
+console.log(newArr);   
+
+
+28. //map() method
 const zawad = new Map();
 zawad.set('fullName', 'Zawad Ahmed');
 zawad.get('fullName');  //output: Zazad Ahmed
@@ -338,7 +368,7 @@ zawad.has('something');  // false
 
 zawad.delete('fullName'); // delete propertie
 
-zazae.clear();   // remove map
+zawad.clear();   // remove map
 
 // another
 const favorite = new Map();
@@ -351,18 +381,15 @@ console.log(favorite.size);
 
 favorite.forEach((value, key) => console.log(`Key is: ${key} and the value is: ${value}`));
 
-// for of diyeo loop chalate pari
+29. // for of diyeo loop chalate pari
 for(let [key, value] of favorite.entries()) {
    console.log(`Key is: ${key} and the value is: ${value}`);
 }
 
 
-
-//Destructin
+30.//Destructin
 //alternative of seperate assign
 //  var name = zonayed[0];
-// var age = zonayed[1];
-// var profession = zonayed[2];
 const zonayed = ['Zonayed Ahmed', 21, 'Student'];
 const [name6, age6, profession6] = zonayed;
 console.log(name6);
@@ -375,12 +402,12 @@ const zonayedObj = {
    ageObj: 21,
    professionObj: 'Student'
 };
-const { nameObj, ageObj, professionObj } = zonayedObj;  // conlsole.log(nameObj)
+const { nameObj, ageObj, professionObj } = zonayedObj;  // console.log(nameObj) 
 
 // onject in object access
 const { anotherObj: { anotherNewObj: { title: newTitle } } } = comObj;
 
-//Array in es6
+31.//Array in es6
 const nodeList = document.querySelectorAll('.box-content');  //.box-content all are div class
 const nodeToArr6 = Array.from(nodeList);   // nodeList was object //but now converted to array
 
@@ -395,13 +422,13 @@ for(const number of numbers) {
    console.log(`Number printed ${number}`);
 }
 
-// find number from array
+32.// find number from array
 var numbers = [19, 23, 14, 56, 32, 65, 10, 45];
 //es5
 var findNum = numbers.map(function(theNum) {
    return theNum === 65;
 }) 
-console.log(findNum)  // false false ......true..false
+console.log(findNum)  // [false false ......true..false]
 
 
 //using index
@@ -412,14 +439,14 @@ numbers[findNum.indexOf(true)]  // output:: 65
 numbers.findIndex(number => number === 65); //output: 5
 
 
-//spread operator
+33.//spread operator
 //es5
 var numbers = [1, 2, 3, 4];
 function calculate(a, b, c, d) {
    console.log('Sum: ' + (a + b + c + d));
 }
 calculate(1, 2, 3, 4)  //or using array below
-calculate.apply(null, numbers)  //output :10
+calculate.apply(null, numbers)  //output :10   //apply similar as call// but takes argument as array
 // es 6
 calculate(...numbers)   //simple output: 10
 
@@ -435,8 +462,11 @@ arrOne = arrOne.concat(arrTwo)
 arrOne = [...arrOne, ...arrTwo]
 
 
-//rest parameter
+34.//rest parameter
 https://js.zonayed.me/es6/post-8
+//অ্যারো ফাংশনে এই argumentঅবজেক্ট কাজ করবে না। 
+//আর তাই আপনি যখন অ্যারো ফাংশন ইউজ করতে যাবেন তখন আপনাকে এই ক্ষেত্রে রেস্ট প্যারামিটার ইউজ করতে হবে।
+
 //es5
 function arguments5() {
    for(var i = 0; i < arguments.length; i++) {
@@ -470,7 +500,7 @@ function argumentsMeth() {
    })
 }
 
-//but amra object ke array te convert korte pari
+35.//but amra object ke array te convert korte pari
 //it will work
 function argumentsMethWork() {
    var argsArr = Array.prototype.slice.call(arguments);
@@ -482,7 +512,7 @@ function argumentsMethWork() {
 argumentsMethWork('Bangladesh', 'India', 'Sri Lanka')
 
 
-//Rest parameter use kore uporer sob gulo problem solve korte pari
+36.//Rest parameter use kore uporer sob gulo problem solve korte pari
 // arrow function will work with rest parameter
 // ALL METHOD will work  with spread operator
 const argumentsArr6 = (...anyName) => {
@@ -506,7 +536,7 @@ const restExtra = (name, age, ...others) => {
 restExtra('Zonayed Ahmed', 21, 'JavaScript', 'Chrome', 'Web Developer', 'Front End Engineer')
 
 
-// Default parameter
+37// Default parameter
 //es5
 function defaultParams(name, age) {
    name ? name = name : name = 'Zonayed Ahmed'
@@ -533,7 +563,7 @@ var zonayed6 = new FunctionConst6();
 console.log(zonayed6.name);
 console.log(zonayed6.age);
 
-//class
+38//class
 //function constructor
 var Child5 = function(name, dob) {
    this.name = name;
@@ -564,7 +594,7 @@ console.log(zawad6.dob);
 zawad6.currentAge();
 
 
-//class and inheritance
+39//class and inheritance
 
 class PersonClass {
    constructor(name, age, job) {
@@ -582,7 +612,7 @@ class TeacherClass extends PersonClass {        // inheritance
 const ourSir = new TeacherClass('Shafiq Sir', 46, 'Assistant Teacher', 'Physics');
 
 
-// method o inherit korte parbe 
+40// method o inherit korte parbe 
 class PersonClassMeth {
    constructor(name, age, job) {
       this.name = name;
@@ -604,7 +634,7 @@ const ourSirMeth = new TeacherClassMeth('Shafiq Sir', 46, 'Assistant Teacher', '
 
 // console.log(ourSirMeth.dateOfBirth());  method o acces kora jabe
 
-// sudhu matro class er maddhome method acces kora jabe static er maddhome
+41// sudhu matro class er maddhome method acces kora jabe static er maddhome
 class StaticMethod {
    constructor(name) {
       this.name = name;
@@ -617,3 +647,11 @@ console.log(StaticMethod.aSpecMeth());
 // console.log(aMeth.aSpecMeth());   error asbe কারণ এটা staticমেথড। এটা শুধুমাত্র উক্ত ক্লাস দিয়েই অ্যাক্সেস করা যাবে, 
 // কিন্তু সেই ক্লাস দিয়ে তৈরী কোনো অবজেক্ট দিয়ে অ্যাক্সেস করা যাবে না।
 
+
+
+///prototype
+// object to array(arguments)
+var arr = prototype.slice.call(arguments);
+// to inherit object method(function constructor)
+Person.prototype.dateOfBirth = function(){}
+// 

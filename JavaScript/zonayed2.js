@@ -1,4 +1,4 @@
-//DOM manipulation
+1//DOM manipulation
 // dom added method
 // element select
 document.querySelector('#box1'); 
@@ -17,7 +17,7 @@ document.getElementsByClassName('box'): এটাও আরেকটা সি�
 
  // tag selector
  document.querySelector():                //আমরা জানি, এটা দিয়ে সবই সিলেক্ট করা যায়। 
-  document.querySelector('div')             //তবে সবগুলো ম্যাচের মধ্যে একদম প্রথমটা সিলেক্ট করবে
+  document.querySelector('div')           //তবে সবগুলো ম্যাচের মধ্যে একদম প্রথমটা সিলেক্ট করবে
 
   document.querySelectorAll('h4, p, ul');
 
